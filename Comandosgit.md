@@ -40,13 +40,37 @@
     ` git commit -m " <mensaje_descriptivo_commit>"`
 
     -m: indaca que se agregara un mensaje al commmit, todo commit debe tener un mensaje que describa de forma general los cambios realizados.
-* Vel el listado de commit realizados
+* Ver el listado de commit realizados
+
+    ` git log <numero_comit>`
+
+* Ver  un commit realizado
 
     ` git log`
 
 * Cambiar entre commit
 
     ` git checkout <numero_comit>`
+
+* Ir al ultimo comit
+
+    ` git checkout master`
+* Borrar los comit
+
+    ` git reset [--soft, --mixed, --hard ]` 
+
+    --soft: Borra el commit pero no borra los archivos del disco.
+
+    --mixed: No borra el Staging area ni el Working area
+
+    --hard: Borra el commit y el archivo.
+
+* Ver la ayuda de git
+
+    ` git help [<comando>]`
+
+
+
 
 
 
