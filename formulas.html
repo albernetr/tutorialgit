@@ -1,0 +1,853 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es">
+<head>
+<title>Escribir ecuaciones matem&#225;ticas y qu&#237;micas en la Web con CSS - EniG. Webmaster Tools</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<meta name="description" content="Escribiendo las ecuaciones matem&#225;ticas y qu&#237;micas (flechas dobles, n&#250;meros de oxidaci&#243;n, fracciones) en Web, con la ayuda de CSS.">
+<meta name="keywords" content="escribir, ecuaciones, matem&#225;ticas, qu&#237;micas, web, doble, flecha, ecuaciones, equilibrio, n&#250;mero, oxidaci&#243;n, elementos, fracciones, suma, integrales, radicales, vectores, l&#237;mites, caja, CSS">
+<meta name="url" content="https://www.periodni.com">
+<meta name="author" content="Eni Generalic, Faculty of Chemistry and Technology, Split, Croatia">
+<meta name="reply-to" content="enig@periodni.com">
+<meta name="copyright" content="Copyright &copy; 1998-2017 Eni Generalic, All Rights Reserved">
+<link rel="shortcut icon" href="https://www.periodni.com/slike/pse.ico">
+<link media="all" href="https://www.periodni.com/css/math.css" type="text/css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+.mobile-neboder { width: 320px; height: 50px; }
+@media(min-width: 500px) { .mobile-neboder { width: 468px; height: 60px; } }
+@media(min-width: 768px) { .mobile-neboder { width: 160px; height: 600px; } }
+
+.mobile-vodoravno { width: 320px; height: 50px; }
+@media(min-width: 500px) { .mobile-vodoravno { width: 468px; height: 60px; } }
+@media(min-width: 768px) { .mobile-vodoravno { width: 728px; height: 90px; } }
+</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1925923-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+
+<div id="headlayer">
+
+<div class="xrow">
+	<div class="logo">
+	 <a href="https://www.periodni.com/es/index.html"><img src="https://www.periodni.com/slike/pse.png" width="75" height="74" title="EniG. Periodic Table of the Elements, Calculators, and Printable Materials" alt="www.periodni.com"></a>
+	 <ul>
+	 <li><a href="https://www.periodni.com/es/tabla_periodica_de_los_elementos.html">Tabla peri&#243;dica de los elementos</a></li>
+	 <li><a href="https://www.periodni.com/es/calculadora_cientifica.html">Calculadoras qu&#237;mica</a></li>
+	 <li><a href="https://www.periodni.com/gallery/images.php">Galer&#237;a de im&#225;genes</a></li>
+	 </ul>
+	</div>
+</div>
+
+<div id="menulayer">
+<!-- Top Menu is located at the bottom of the page -->
+
+<div id="bodylayer">
+
+<div class="xrow">    
+
+<div id="ebody">
+
+<h1>ESCRIBIR ECUACIONES MATEM&#193;TICAS Y QU&#205;MICAS EN LA WEB CON CSS</h1>
+
+<div class="txt-c">
+<a href="#double_arrow">Doble flecha</a> &diams; 
+<a href="#fractions">Fracciones</a> &diams; 
+<a href="#oxidation_numbers">N&#250;mero de oxidaci&#243;n</a> &diams; 
+<a href="#vectors">Vectores</a> &diams; 
+<a href="#limits">L&#237;mites e n&#250;mero m&#225;sico</a> &diams; 
+<a href="#sum_and_integrals">Suma e integrales</a> &diams; 
+<a href="#radicals">Radicales</a>
+</div>
+
+<div class="xrow">
+<div class="googleup">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- mobile_neboder -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1400010696125762"
+     data-ad-slot="9786503771"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</div>
+
+
+
+<p>&nbsp;</p>
+
+<h2 id="double_arrow">La doble flecha de las ecuaciones en equilibrio</h2>
+
+
+
+<div class="eq-c">
+C + O<sub>2</sub> <span class="dblarrow">&rarr;</span> CO<sub>2</sub>
+</div>
+
+<div class="xrow eqweb">
+	<div class="ycols6">
+	<h4>HTML C&#243;digo:</h4>
+	<div class="kod">
+	<div class="crven">&lt;div class="eq-c"&gt;</div>
+	<b>C + O</b>&lt;sub><b>2</b>&lt;/sub&gt; &lt;span class="dblarrow"&gt;<span class="plav"><b>&amp;rarr;</b></span>&lt;/span&gt; <b>CO</b>&lt;sub><b>2</b>&lt;/sub&gt;<br>
+	<div class="crven">&lt;/div&gt;</div>
+	</div>
+	</div>
+	<div class="ycols6">
+	<h4>CSS C&#243;digo:</h4>
+	<pre>
+.dblarrow {
+    font-size: 125%;
+    top: -0.4ex;
+    margin: 0 2px;
+}
+.dblarrow:after {
+    content:"\2190";
+    position: absolute;
+    left: 0;
+    top: 0.5ex;
+}</pre>
+	</div>
+</div>
+
+
+<p>&nbsp;</p>
+
+<h2 id="fractions">C&#243;mo puedo hacer para meter fracciones en las p&#225;ginas Web</h2>
+
+
+
+<div class="xrow eqweb">
+	<div class="ycols6">
+	<p>&nbsp;</p>
+	<div class="eq-c">
+	<sup>2</sup>&frasl;<sub>11</sub>
+	</div>
+	</div>
+	<div class="ycols6">
+	<h4>HTML C&#243;digo:</h4>
+	<div class="kod">
+&lt;sup&gt;<b>2</b>&lt;/sup&gt;<span class="plav"><b>&amp;frasl;</b></span>&lt;sub&gt;<b>11</b>&lt;/sub&gt;
+	</div>
+	</div>
+</div>
+
+<p>&nbsp;</p>
+
+
+
+<div class="eq-c">
+<i>c</i>(NaOH) = 
+<div class="fraction">
+	<span class="fup"><i>n</i>(NaOH)</span>
+	<span class="bar">/</span>
+	<span class="fdn"><i>V</i>(NaOH)</span>
+</div>
+ = 1.2345 mol dm<sup>-3</sup>
+</div>
+
+<div class="xrow eqweb">
+	<div class="ycols6">
+	<h4>HTML C&#243;digo:</h4>
+	<div class="kod">
+<div class="crven">&lt;div class="eq-c"&gt;</div>
+&lt;i&gt;<b>c</b>&lt;/i&gt;<b>(NaOH) =</b> <br>
+&lt;div class="fraction"&gt;<br>
+	&lt;span class="fup"&gt;&lt;i&gt;<b>n</b>&lt;/i&gt;<b>(NaOH)</b>&lt;/span&gt;<br>
+	&lt;span class="bar"&gt;<b>/</b>&lt;/span&gt;<br>
+	&lt;span class="fdn"&gt;&lt;i&gt;<b>V</b>&lt;/i&gt;<b>(NaOH)</b>&lt;/span&gt;<br>
+&lt;/div&gt;<br>
+ <b>= 1.2345 mol dm</b>&lt;sup&gt;<b>-3</b>&lt;/sup&gt;<br>
+<div class="crven">&lt;/div&gt;</div>
+	</div>
+	</div>
+	<div class="ycols6">
+	<h4>CSS C&#243;digo:</h4>
+<pre>
+.fraction {
+    display: inline-block;
+    vertical-align: middle; 
+    margin: 0 0.2em 0.4ex;
+    text-align: center;
+}
+.fraction > span {
+    display: block;
+    padding-top: 0.15em;
+}
+.fraction span.fdn {border-top: thin solid black;}
+.fraction span.bar {display: none;}</pre>
+	</div>
+</div>
+
+
+<p>&nbsp;</p>
+
+<h2 id="oxidation_numbers">Escriba el n&#250;mero de oxidaci&#243;n de los elementos</h2>
+
+
+
+<div class="eq-c">
+<b>O:&nbsp;</b> 
+<span class="sy-r">Te<span class="oxbr">+4</span></span><span class="sy">O<span class="oxbr">-2</span></span><sub>2</sub>
+ <span class="rarrow">&rarr;<span class="larrow">&larr;</span></span> 
+<span class="sy">H<span class="oxbr">+1</span></span><sub>6</sub><span class="sy-r">Te<span class="oxbr">+6</span></span><span class="sy">O<span class="oxbr">-2</span></span><sub>6</sub> + 
+<span class="sy-g">2e<sup>-</sup></span>
+</div>
+<br>
+<div class="eq-c">
+<b>R:&nbsp;</b> 
+<span class="sy-b">Cr<span class="oxbr">+6</span></span><sub>2</sub><span class="sy">O<span class="oxbr">-2</span></span><sub>7</sub><sup>2-</sup> + 
+<span class="sy-g">6e<sup>-</sup></span>
+ <span class="rarrow">&rarr;<span class="larrow">&larr;</span></span> 
+ 2<span class="sy-b">Cr<span class="oxbr">+3</span></span><sup>3+</sup>
+</div>
+
+<div class="xrow eqweb">
+	<div class="ycols6">
+	<h4>HTML C&#243;digo:</h4>
+	<div class="kod">
+<div class="crven">&lt;div class="eq-c"&gt;</div>
+&lt;b&gt;<b>O:</b>&nbsp;&lt;/b&gt; <br>
+&lt;span class="sy-r"&gt;<b>Te</b>&lt;span class="oxbr"&gt;<b>+4</b>&lt;/span&gt;&lt;/span&gt;&lt;span class="sy"&gt;<b>O</b>&lt;span class="oxbr"&gt;<b>-2</b>&lt;/span&gt;&lt;/span&gt;&lt;sub&gt;<b>2</b>&lt;/sub&gt;<br>
+<br>
+&lt;span class="rarrow"&gt;<span class="plav"><b>&amp;rarr;</b></span>&lt;span class="larrow"&gt;<span class="plav"><b>&amp;larr;</b></span>&lt;/span&gt;&lt;/span&gt; <br>
+<br>
+&lt;span class="sy"&gt;<b>H</b>&lt;span class="oxbr"&gt;<b>+1</b>&lt;/span&gt;&lt;/span&gt;&lt;sub&gt;<b>6</b>&lt;/sub&gt;&lt;span class="sy-r"&gt;<b>Te</b>&lt;span class="oxbr"&gt;<b>+6</b>&lt;/span&gt;&lt;/span&gt;&lt;span class="sy"&gt;<b>O</b>&lt;span class="oxbr"&gt;<b>-2</b>&lt;/span&gt;&lt;/span&gt;&lt;sub&gt;<b>6</b>&lt;/sub&gt; <b>+</b> <br>
+&lt;span class="sy-g"&gt;<b>2e</b>&lt;sup&gt;<b>-</b>&lt;/sup&gt;&lt;/span&gt;<br>
+<div class="crven">&lt;/div&gt;</div>
+
+<br><br>
+
+<div class="crven">&lt;div class="eq-c"&gt;</div>
+&lt;b&gt;<b>R:</b>&nbsp;&lt;/b&gt; <br>
+&lt;span class="sy-b"&gt;<b>Cr</b>&lt;span class="oxbr"&gt;<b>+6</b>&lt;/span&gt;&lt;/span&gt;&lt;sub&gt;<b>2</b>&lt;/sub&gt;&lt;span class="sy"&gt;<b>O</b>&lt;span class="oxbr"&gt;<b>-2</b>&lt;/span&gt;&lt;/span&gt;&lt;sub&gt;<b>7</b>&lt;/sub&gt;&lt;sup&gt;<b>2-</b>&lt;/sup&gt; <b>+</b> <br>
+&lt;span class="sy-g"&gt;<b>6e</b>&lt;sup&gt;-&lt;/sup&gt;&lt;/span&gt;<br>
+<br>
+&lt;span class="rarrow"&gt;<span class="plav"><b>&amp;rarr;</b></span>&lt;span class="larrow"&gt;<span class="plav"><b>&amp;larr;</b></span>&lt;/span&gt;&lt;/span&gt; <br>
+<br>
+<b>2</b>&lt;span class="sy-b"&gt;<b>Cr</b>&lt;span class="oxbr"&gt;<b>+3</b>&lt;/span&gt;&lt;/span&gt;&lt;sup&gt;<b>3+</b>&lt;/sup&gt;<br>
+<div class="crven">&lt;/div&gt;</div>
+	</div>
+	</div>
+	<div class="ycols6">
+	<h4>CSS C&#243;digo:</h4>
+<pre>
+.sy, 
+.sy-r, 
+.sy-g, 
+.sy-b {
+    position: relative;
+    text-align: center;
+}
+.sy-r {color: #f00;}
+.sy-g {color: #4f8c4f;}
+.sy-b {color: #00f;}
+.oxbr, 
+.oncapital, 
+.onsmall {
+    position: absolute;
+    top: -1em;
+    left: 0px;
+    width: 100%;
+    font-size: 70%;
+    text-align: center;
+}
+.onsmall {
+    top: -0.7em;
+}</pre>
+	</div>
+</div>
+
+
+
+<p>&nbsp;</p>
+
+<h2 id="vectors">Vectores</h2>
+
+
+
+<div class="eq-c">
+<span class="sy"><i>A</i><span class="oncapital">&rarr;</span></span> =
+<div class="fraction">
+<span class="fup">&Delta;<span class="sy"><i>v</i><span class="onsmall">&rarr;</span></span></span>
+<span class="bar">/</span>
+<span class="fdn">&Delta; <i>t</i></span>
+</div>
+</div>
+
+<div class="xrow eqweb">
+	<div class="ycols6">
+	<h4>HTML C&#243;digo:</h4>
+	<div class="kod">
+<div class="crven">&lt;div class="eq-c"&gt;</div>
+&lt;span class="sy"&gt;&lt;i&gt;<b>A</b>&lt;/i&gt;&lt;span class="oncapital"&gt;<span class="plav"><b>&amp;rarr;</b></span>&lt;/span&gt;&lt;/span&gt; =<br>
+&lt;div class="fraction"&gt;<br>
+	&lt;span class="fup"&gt;<span class="plav"><b>&amp;Delta;</b></span>&lt;span class="sy"&gt;&lt;i&gt;<b>v</b>&lt;/i&gt;&lt;span class="onsmall"&gt;<span class="plav"><b>&amp;rarr;</b></span>&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;<br>
+	&lt;span class="bar"&gt;<b>/</b>&lt;/span&gt;<br>
+	&lt;span class="fdn"&gt;<span class="plav"><b>&amp;Delta;</b></span> &lt;i&gt;<b>t</b>&lt;/i&gt;&lt;/span&gt;<br>
+&lt;/div&gt;<br>
+<div class="crven">&lt;/div&gt;</div>
+	</div>
+	</div>
+	<div class="ycols6">
+	<h4>CSS C&#243;digo:</h4>
+<pre>
+.sy {
+    position: relative;
+    text-align: center;
+}
+.oncapital, .onsmall {
+    position: absolute;
+    top: -1em;
+    left: 0px;
+    width: 100%;
+    font-size: 70%;
+    text-align: center;
+}
+.onsmall {
+    top: -0.7em;
+}</pre>
+	</div>
+</div>
+
+
+
+<p>&nbsp;</p>
+
+<h2 id="limits_and_mass_number">L&#237;mites e n&#250;mero m&#225;sico</h2>
+
+
+
+<div class="xrow">
+<div class="ycols6">
+	<div class="eq-c">
+	<i>a</i> =
+	<div class="limes">
+	<span class="overup">lim</span>
+	<span class="overdn">&Delta; <i>t</i>&rarr;0</span>
+	</div>
+	<div class="fraction">
+	<span class="fup">&Delta;<i>v</i></span>
+	<span class="bar">/</span>
+	<span class="fdn">&Delta; <i>t</i></span>
+	</div>
+	</div>
+</div>
+<div class="ycols6"><br>
+	<div class="eq-c">
+	<span class="limes"><span class="numup">14</span><span class="overdn">6</span></span>C &rarr; 
+	<span class="limes"><span class="numup">14</span><span class="overdn">7</span>
+	</span>N + <span class="sy">&nu;<span class="onsmall">&ndash;</span></span>
+	</div>
+</div>
+</div>
+
+<div class="xrow eqweb">
+	<div class="ycols6">
+	<h4>HTML C&#243;digo:</h4>
+	<div class="kod">
+<div class="crven">&lt;div class="eq-c"&gt;</div>
+&lt;i&gt;<b>a</b>&lt;/i&gt; =<br>
+&lt;div class="limes"&gt;<br>
+&lt;span class="overup"&gt;<b>lim</b>&lt;/span&gt;<br>
+&lt;span class="overdn"&gt;<span class="plav"><b>&amp;Delta;</b></span> &lt;i&gt;<b>t</b>&lt;/i&gt;<span class="plav"><b>&amp;rarr;</b></span><b>0</b>&lt;/span&gt;<br>
+&lt;div class="fraction"&gt;<br>
+	&lt;span class="fup"&gt;<span class="plav"><b>&amp;Delta;</b></span>&lt;i&gt;<b>v</b>&lt;/i&gt;&lt;/span&gt;<br>
+	&lt;span class="bar"&gt;<b>/</b>&lt;/span&gt;<br>
+	&lt;span class="fdn"&gt;<span class="plav"><b>&amp;Delta;</b></span> &lt;i&gt;<b>t</b>&lt;/i&gt;&lt;/span&gt;<br>
+&lt;/div&gt;<br>
+<div class="crven">&lt;/div&gt;</div>
+<p>&nbsp;</p>
+<div class="crven">&lt;div class="eq-c"&gt;</div>
+&lt;span class="limes"&gt;&lt;span class="numup"&gt;<b>14</b>&lt;/span&gt;&lt;span class="overdn"&gt;<b>6</b>&lt;/span&gt;&lt;/span&gt;<b>C</b> <span class="plav"><b>&amp;rarr;</b></span> <br>
+&lt;span class="limes"&gt;&lt;span class="numup"&gt;<b>14</b>&lt;/span&gt;&lt;span class="overdn"&gt;<b>7</b>&lt;/span&gt;<br>
+&lt;/span&gt;<b>N +</b> &lt;span class="sy"&gt;<span class="plav"><b>&amp;nu;</b></span>&lt;span class="onsmall"&gt;<span class="plav"><b>&amp;ndash;</b></span>&lt;/span&gt;&lt;/span&gt;<br>
+<div class="crven">&lt;/div&gt;</div>
+	</div>
+	</div>
+	<div class="ycols6">
+	<h4>CSS C&#243;digo:</h4>
+<pre>
+.limes {
+    position: relative;
+    display: inline-block;
+    margin: 0 0.2em;
+    vertical-align: middle; 
+    text-align: center;
+}
+.limes > span { 
+    display: block;
+    margin:-0.5ex auto;
+}
+.limes span.numup,
+.limes span.overdn {
+    font-size: 70%;
+}</pre>
+	</div>
+</div>
+
+
+
+
+<p>&nbsp;</p>
+
+<h2 id="sum_and_integrals">Suma e integrales</h2>
+
+
+
+<div class="xrow">
+<div class="ycols6">
+	<div class="eq-c">
+		<i>S</i> = 
+		<span class="intsuma">
+			<span class="lim">5</span>
+			<span class="sum-frac">&sum;</span>
+			<span class="lim"><i>n</i>=0</span>
+		</span>
+	<div class="fraction">
+		<span class="fup">(<i>x</i> + 1)<sup><i>n</i></sup></span>
+		<span class="bar">/</span>
+		<span class="fdn"><i>n</i></span>
+	</div>
+	</div>
+</div>
+<div class="ycols6">
+	<div class="eq-c">
+		<span class="intsuma">
+			<span class="lim-up">2&pi;</span>
+			<span class="sum">&int;</span>
+			<span class="lim">0</span>
+		</span>
+		sin<i>x</i> d<i>x</i> = 0
+	</div>
+</div>
+</div>
+
+
+
+<div class="xrow eqweb">
+	<div class="ycols6">
+	<h4>HTML C&#243;digo:</h4>
+	<div class="kod">
+<div class="crven">&lt;div class="eq-c"&gt;</div>
+	&lt;i&gt;<b>S</b>&lt;/i&gt; <b>=</b> <br>
+	&lt;span class="intsuma"&gt;<br>
+		&lt;span class="lim"&gt;<b>5</b>&lt;/span&gt;<br>
+		&lt;span class="sum-frac"&gt;<span class="plav"><b>&amp;sum;</b></span>&lt;/span&gt;<br>
+		&lt;span class="lim"&gt;&lt;i&gt;<b>n</b>&lt;/i&gt;<b>=0</b>&lt;/span&gt;<br>
+	&lt;/span&gt;<br>
+&lt;div class="fraction"&gt;<br>
+	&lt;span class="fup"&gt;<b>(</b>&lt;i&gt;<b>x</b>&lt;/i&gt;<b> + 1)</b>&lt;sup&gt;&lt;i&gt;<b>n</b>&lt;/i&gt;&lt;/sup&gt;&lt;/span&gt;<br>
+	&lt;span class="bar"&gt;<b>/</b>&lt;/span&gt;<br>
+	&lt;span class="fdn"&gt;&lt;i&gt;<b>n</b>&lt;/i&gt;&lt;/span&gt;<br>
+&lt;/div&gt;<br>
+<div class="crven">&lt;/div&gt;</div>
+
+<br><br>
+
+<div class="crven">&lt;div class="eq-c"&gt;</div>
+	&lt;span class="intsuma"&gt;<br>
+		&lt;span class="lim-up"&gt;<b>2</b><span class="plav"><b>&amp;pi;</b></span>&lt;/span&gt;<br>
+		&lt;span class="sum"&gt;<span class="plav"><b>&amp;int;</b></span>&lt;/span&gt;<br>
+		&lt;span class="lim"&gt;<b>0</b>&lt;/span&gt;<br>
+	&lt;/span&gt;<br>
+	<b>sin</b>&lt;i&gt;<b>x</b>&lt;/i&gt; <b>d</b>&lt;i&gt;<b>x</b>&lt;/i&gt; <b>= 0</b><br>
+<div class="crven">&lt;/div&gt;</div>
+	</div>
+	</div>
+	<div class="ycols6">
+	<h4>CSS C&#243;digo:</h4>
+<pre>
+.intsuma {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+.intsuma > span {
+    display: block;
+    font-size: 70%;
+}
+.intsuma .lim-up {
+    margin-bottom: -1.0ex;
+}
+.intsuma .lim {
+    margin-top: -0.5ex;
+}
+.intsuma .sum {
+    font-size: 1.5em;
+    font-weight: lighter;
+}
+.intsuma .sum-frac {
+    font-size: 1.5em;
+    font-weight: 100;
+}</pre>
+	</div>
+</div>
+
+
+
+<p>&nbsp;</p>
+
+<h2 id="radicals">Radicales</h2>
+
+
+
+<div class="eq-c">
+	<span class="radical"><span class="n-root">3</span>&radic;</span><span class="radicand">81</span>
+</div>
+
+<div class="eq-c">
+	<i>y</i> = 
+	<span class="radical">&radic;</span><span class="radicand"><i>x</i><sup>2</sup> + 6</span>
+</div>
+
+
+<div class="xrow eqweb">
+	<div class="ycols6">
+	<h4>HTML C&#243;digo:</h4>
+	<div class="kod">
+<div class="crven">&lt;div class="eq-c"&gt;</div>
+	&lt;span class="radical"&gt;&lt;span class="n-root"&gt;<b>3</b>&lt;/span&gt;<span class="plav"><b>&amp;radic;</b></span>&lt;/span&gt;&lt;span class="radicand"&gt;<b>81</b>&lt;/span&gt;<br>
+<div class="crven">&lt;/div&gt;</div>
+
+<br><br>
+
+<div class="crven">&lt;div class="eq-c"&gt;</div>
+	&lt;i&gt;<b>y</b>&lt;/i&gt; <b>=</b> <br>
+	&lt;span class="radical"&gt;<span class="plav"><b>&amp;radic;</b></span>&lt;/span&gt;&lt;span class="radicand"&gt;&lt;i&gt;<b>x</b>&lt;/i&gt;&lt;sup&gt;<b>2</b>&lt;/sup&gt; <b>+ 6</b>&lt;/span&gt;<br>
+<div class="crven">&lt;/div&gt;</div>
+	</div>
+	</div>
+	<div class="ycols6">
+	<h4>CSS C&#243;digo:</h4>
+<pre>
+.radical {
+    position: relative;
+    font-size: 1.6em;
+    vertical-align: middle;
+}
+.n-root {
+    position: absolute;
+    top: -0.333em;
+    left: 0.333em;
+    font-size: 45%;
+}
+.radicand { 
+    padding: 0.25em 0.25em;
+    border-top: thin black solid;
+}</pre>
+	</div>
+</div>
+
+
+
+<p>&nbsp;</p>
+
+<h2 id="css_box">Qu&#233; es lo que en caja de CSS</h2>
+
+<p>El modelo de caja CSS es esencialmente una caja que se envuelve alrededor de los elementos HTML, y se compone de: m&#225;rgenes, bordes, el relleno y el contenido real.</p>
+
+<div class="eq-c">
+<a href="https://www.periodni.com/gallery/css-box.png"><img title="Modelo de caja CSS" src="https://www.periodni.com/pictures/css-box.jpg" width="259" height="279" alt="Modelo de caja CSS"></a>
+</div>
+<div class="txt-r"><a href="https://www.periodni.com/gallery/download_image.php?name=css-box.png&amp;source=es/ecuaciones_matematicas_y_quimicas_en_la_web.html">&rarr;&nbsp;Download high quality image</a></div>
+
+<p>&nbsp;</p>
+
+<h2>W3C Link Checker</h2>
+
+<div class="txt-c"><a href="http://validator.w3.org/checklink">W3C Link Checker</a></div>
+
+<p>&nbsp;</p>
+
+<h3 id="bibliography">Bibliograf&#237;a:</h3>
+<ul>
+
+<li>"CSS3 Dropdown Menu." 23 Feb. Web Designer Wall. 2010. 27 May. 2011. &lt;<a href="http://webdesignerwall.com/tutorials/css3-dropdown-menu">http://webdesignerwall.com/tutorials/css3-dropdown-menu</a>&gt;</li>
+
+<li>"CSS Tutorial." W3Schools. 22 May. 2011. &lt;<a href="http://www.w3schools.com/css/default.asp">http://www.w3schools.com/css/default.asp</a>&gt;</li>
+
+<li>Steve White. "Math in HTML with CSS." 7 Jul. 2011. &lt;<a href="http://www.zipcon.net/~swhite/docs/math/math.html">http://www.zipcon.net/~swhite/docs/math/math.html</a>&gt;</li>
+
+<li>"A MathML for CSS Profile." 7 June 2011, W3C. 8 Jul. 2011. &lt;<a href="http://www.w3.org/TR/WD-html40-970708">http://www.w3.org/TR/WD-html40-970708</a>&gt;</li>
+
+<li>"Unicode Character 'RIGHTWARDS ARROW OVER LEFTWARDS ARROW' (U+21C4)." FileFormat.Info. 14 Jul. 2011. &lt;<a href="http://www.fileformat.info/info/unicode/char/21c4/index.htm">http://www.fileformat.info/info/unicode/char/21c4/index.htm</a>&gt;</li>
+</ul>
+
+</div>   <!-- END ebody -->
+
+</div>   <!-- END xrow -->
+
+<hr>
+<div class="xrow">
+<div class="googledown">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- mobile_vodoravno -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1400010696125762"
+     data-ad-slot="5430356173"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+</div>
+
+
+<div class="xrow gotop">
+	<div class="ycols12">
+<ul>
+<li><a title="Deutsch" href="https://www.periodni.com/de/mathematische_und_chemische_formeln_auf_web.html"><img src="https://www.periodni.com/slike/s_de.jpg" width="20" height="10" alt="Deutsch"></a></li>
+<li><a title="English" href="https://www.periodni.com/mathematical_and_chemical_equations_on_web.html"><img src="https://www.periodni.com/slike/s_en.jpg" width="20" height="10" alt="English"></a></li>
+<li><a title="Fran&#231;ais" href="https://www.periodni.com/fr/equations_mathematiques_et_chimiques_sur_le_web.html"><img src="https://www.periodni.com/slike/s_fr.jpg" width="20" height="10" alt="Francais"></a></li>
+<li><a title="Hrvatski" href="https://www.periodni.com/hr/matematicke_i_kemijske_jednadzbe_na_webu.html"><img src="https://www.periodni.com/slike/s_hr.jpg" width="20" height="10" alt="Hrvatski"></a></li>
+<li><a title="Italiano" href="https://www.periodni.com/it/equazioni_matematiche_e_chimiche_sul_web.html"><img src="https://www.periodni.com/slike/s_it.jpg" width="20" height="10" alt="Italiano"></a></li>
+<li><a title="Espa&#241;ol" href="https://www.periodni.com/es/ecuaciones_matematicas_y_quimicas_en_la_web.html"><img src="https://www.periodni.com/slike/s_es.jpg" width="20" height="10" alt="Espanol"></a></li>
+</ul>
+
+	<p><a href="javascript:window.scrollTo(0,0)">Volver arriba &uarr;</a></p>
+	</div>
+</div>
+
+<br class="clear" />
+
+<div class="xrow">
+	<div class="ycols12">
+	<p>Citaci&#243;n de esta p&#225;gina:</p>
+	<p class="citat">Generalic, Eni. "Escribir ecuaciones matem&#225;ticas y qu&#237;micas en la Web con CSS." <i>EniG. Tabla peri&#243;dica de los elementos</i>. KTF-Split, 30 Aug. 2017. Web. <span id="nowdate">{Fecha de acceso}</span>. &#60;https://www.periodni.com/es/ecuaciones_matematicas_y_quimicas_en_la_web.html&#62;.</p>
+	</div>
+</div>
+
+<div class="xrow">
+	<div class="ycols12 txt-c">
+	<div class="social">
+	<a href="https://www.facebook.com/sharer/sharer.php?u=https://www.periodni.com/es/ecuaciones_matematicas_y_quimicas_en_la_web.html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="https://www.periodni.com/slike/facebook.png" title="Share on Facebook" alt="Share on Facebook" width="32" height="32" /></a>
+
+	<a href="https://plus.google.com/share?url=https://www.periodni.com/es/ecuaciones_matematicas_y_quimicas_en_la_web.html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="https://www.periodni.com/slike/google_plus.png" title="Share on Google+" alt="Share on Google+" width="32" height="32" /></a>
+
+	<a href="https://twitter.com/share?url=https://www.periodni.com/es/ecuaciones_matematicas_y_quimicas_en_la_web.html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="https://www.periodni.com/slike/twitter.png" title="Share on Twitter" alt="Share on Twitter" width="32" height="32" /></a>
+
+	<a href="https://reddit.com/submit?url=https://www.periodni.com/es/ecuaciones_matematicas_y_quimicas_en_la_web.html" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="https://www.periodni.com/slike/reddit.png" title="Share on Reddit" alt="Share on Reddit" width="32" height="32" /></a>
+	</div>
+	</div>
+</div>
+
+</div> <!-- END bodylayer -->
+
+
+<div class="xrow">
+<div class="bottomenu">
+<div class="ycols6 txt-c">
+<a href="https://www.periodni.com/es/index.html"><img src="https://www.periodni.com/slike/pse.png" width="75" height="74" title="EniG. Periodic Table of the Elements, Calculators, and Printable Materials" alt="www.periodni.com"></a>
+<br><br>
+   <a href="https://www.periodni.com/tabla_periodica_de_los_elementos.html">Tabla peri&#243;dica</a><br><br>
+   <a href="https://www.periodni.com/enig/index.html">Sobre el autor</a>
+</div>
+
+<div class="ycols6">
+<p>Calculadoras online</p>
+   <ul>
+    <li><a href="https://www.periodni.com/es/calculadora_cientifica.html">Calculadora cient&#237;fica</a></li>
+	<li><a href="https://www.periodni.com/es/preparacion_de_las_soluciones.php">Preparaci&#243;n de las soluciones</a></li>
+	<li><a href="https://www.periodni.com/es/balanceo_de_ecuaciones_redox.php">Balanceo de ecuaciones redox</a></li>
+	<li><a href="https://www.periodni.com/es/juego_de_memoria.html">Juego de memoria</a></li>
+	</ul>
+</div>
+</div>
+
+<div class="bottomenu">
+<div class="ycols6">
+<p>Tablas y art&#237;culos</p>
+   <ul>
+   <li><a href="https://www.periodni.com/es/tablas_y_articulos-quimica.html">Qu&#237;mica</a></li>
+   <li><a href="https://www.periodni.com/es/tablas_y_articulos-ecologia.html">Ecolog&#237;a</a></li>
+   <li><a href="https://www.periodni.com/es/tablas_y_articulos-diseno_web.html">Dise&#241;o web</a></li>
+   <li><a href="https://glossary.periodni.com/dictionary.php">Diccionario de qu&#237;mica</a></li>
+   </ul>
+</div>
+
+<div class="ycols6">
+<p>Descargas</p>
+   <ul>
+   <li><a href="https://www.periodni.com/es/download.html">Tabla peri&#243;dica imprimible</a></li>
+   <li><a href="https://www.periodni.com/es/software.html">Aplicaciones port&#225;tiles</a></li>
+   <li><a href="https://www.periodni.com/gallery/images.php">Galer&#237;a de im&#225;genes de qu&#237;mica</a></li>
+   </ul>
+</div>	
+</div>
+</div>
+
+
+<!-- Top PSE Menu -->
+<div class="xrow topmenu">
+<ul id="leftnav">
+<li class="mobhide"><a href="#">Tabla peri&#243;dica</a>
+   <ul>
+   <li class="separator"><a href="https://www.periodni.com/es/index.html">Home</a></li>
+   <li><a href="https://www.periodni.com/tabla_periodica_de_los_elementos.html">Forma corta de la tabla peri&#243;dica</a></li>
+   <li><a href="https://www.periodni.com/es/forma_larga_de_la_tabla_periodica.html">Forma larga de la tabla peri&#243;dica</a></li>
+   <li><a href="https://www.periodni.com/history_of_periodic_table_of_elements.html">History of the Periodic table of elements</a></li>
+   <li class="separator"><a href="https://www.periodni.com/es/download.html">Tabla peri&#243;dica imprimible</a></li>
+   <li><a href="https://www.periodni.com/es/configuracion_electronica_de_los_elementos.html">Configuraci&#243;n electr&#243;nica de los elementos</a></li>
+   <li><a href="https://www.periodni.com/es/nombres_de_elementos_ordenados_por_alfabeticamente.html">Lista alfab&#233;tica de elementos qu&#236;micos</a></li>
+   <li class="separator"><a href="https://www.periodni.com/naming_of_new_elements.html">Naming of elements of atomic numbers greater than 100</a></li>
+   <li><a href="https://ascii.periodni.com/es/index.html">ASCII Tabla peri&#243;dica</a></li>
+   </ul>
+</li>
+<li class="mobhide"><a href="#">Calculadoras online</a>
+   <ul>
+   <li><a href="https://www.periodni.com/es/calculadora.html">Calculadora</a></li>
+   <li><a href="https://www.periodni.com/es/calculadora_cientifica.html">Calculadora cient&#237;fica para qu&#237;mica</a></li>
+   <li><a href="https://www.periodni.com/es/calculadora_con_leyes_de_gases.html">Calculadora con leyes de los gases</a></li>
+   <li><a href="https://www.periodni.com/es/calculadora_de_masa_molar.php">Calculadora de masa molar</a></li>
+   <li><a href="https://www.periodni.com/es/convertir_angulo.html">Convertir &#225;ngulo</a></li>
+   <li><a href="https://www.periodni.com/es/convertidor_numeros_romanos.html">Convertidor n&#250;meros romanos</a></li>
+   <li class="separator"><a href="https://www.periodni.com/es/sistema_de_numeracion_convertidor.html">Sistema de numeraci&#243;n convertidor</a></li>
+   
+   <li><a href="https://www.periodni.com/es/preparacion_de_las_soluciones.php">Preparaci&#243;n de las soluciones</a></li>
+   <li class="separator"><a href="https://www.periodni.com/es/etiquetado_de_envases_quimicos.php">Etiquetado de envases qu&#237;micos</a></li>
+   
+   <li><a href="https://www.periodni.com/es/calculadora_de_numeros_de_oxidacion.php">Calculadora de n&#250;meros de oxidacion</a></li>
+   <li class="separator"><a href="https://www.periodni.com/es/balanceo_de_ecuaciones_redox.php">Balanceo de ecuaciones redox</a></li>
+   
+   <li><a href="https://www.periodni.com/es/juego_de_memoria.html">Juego de memoria</a></li>
+   <li><a href="https://www.periodni.com/es/encuentre_los_pares.html">Encuentre los pares</a></li>
+   </ul>
+</li>
+
+<li class="mobhide"><a href="#">Tablas y art&#237;culos</a>
+   <ul>
+	<li><a href="https://www.periodni.com/es/tablas_y_articulos-quimica.html">Qu&#237;mica</a>
+		<ul>
+		<li><a href="https://www.periodni.com/es/abreviaturas_de_quimicos.html">Lista de acr&#243;nimos y abreviaturas</a></li>
+		<li><a href="https://www.periodni.com/es/sistemas-cristalinos-y-redes-de-bravais.html">Sistemas cristalinos y redes de Bravais</a></li>
+		<li><a href="https://www.periodni.com/es/ghs-pictogramas_de_peligro.html">SGA - Pictogramas de peligro</a></li>
+		<li><a href="https://www.periodni.com/es/diamante_de_nfpa_704.html">Diamante de peligro de NFPA 704</a></li>
+		<li><a href="https://www.periodni.com/es/constantes_fisicas_fundamentales.html">Constantes f&#237;sicas fundamentales</a></li>
+		<li><a href="https://www.periodni.com/es/constantes_del_producto_de_solubilidad.html">Constantes del producto de solubilidad</a></li>
+		<li class="separator"><a href="https://www.periodni.com/es/sistema_internacional_de_unidades.html">SI - Sistema Internacional de Unidades</a></li>
+		<li><a href="https://www.periodni.com/es/expresion_cuantitativa_de_composicion_de_soluciones.html">Composici&#243;n de mezclas y soluciones</a></li>
+		<li class="separator"><a href="https://www.periodni.com/es/calculo_estequiometrico.html">C&#225;lculo estequiom&#233;trico</a></li>
+		<li><a href="https://www.periodni.com/chlorinity_and_salinity_of_seawater.html">Chlorinity and salinity of seawater</a></li>
+		<li><a href="https://www.periodni.com/rare_earth_elements.html">Rare earth elements (REE)</a></li>
+
+		</ul>
+	</li>
+	<li><a href="https://www.periodni.com/es/tablas_y_articulos-ecologia.html">Ecolog&#237;a</a>
+	   <ul>
+		<li><a href="https://www.periodni.com/climate_change.html">Climate change</a></li>
+		<li><a href="https://www.periodni.com/global_warming_and_mankind.html">Global warming and mankind</a></li>
+		<li><a href="https://www.periodni.com/story_of_ozone_and_ozone_holes.html">Story of ozone and ozone holes</a></li>
+		<li class="separator"><a href="https://www.periodni.com/world_war_3-battle_for_earth.html">World War 3: Battle for Earth</a></li>
+		<li><a href="https://www.periodni.com/ozone_layer_is_not_a_shield.html">The ozone layer is not a shield</a></li>
+	   </ul>
+	</li>
+	<li class="separator"><a href="https://www.periodni.com/es/tablas_y_articulos-diseno_web.html">Dise&#241;o web</a>
+	   <ul>
+		<li><a href="https://www.periodni.com/es/codigos_hexadecimales_de_colores.html">C&#243;digos hexadecimales de colores</a></li>
+		<li><a href="https://www.periodni.com/es/ecuaciones_matematicas_y_quimicas_en_la_web.html">Escribir ecuaciones en la Web</a></li>
+		<li><a href="https://www.periodni.com/es/ecuaciones_quimicas_en_la_web.php">Escribir ecuaciones qu&#237;micas en la Web</a></li>
+		<li><a href="https://www.periodni.com/es/referencias_a_entidades_de_caracteres_en_html.html">Referencias a entidades de caracteres en HTML</a></li>
+		<li><a href="https://www.periodni.com/es/codificacion_utf-8_unicode.html">Codificaci&#243;n UTF-8 Unicode</a></li>
+	   </ul>
+	</li>
+	<li><a href="https://glossary.periodni.com/dictionary.php">Diccionario de qu&#237;mica (ingl&#233;s-croata)</a></li>
+   </ul>
+</li>
+<li class="mobhide"><a href="#">Descargas</a>
+   <ul>
+   <li><a href="https://www.periodni.com/es/download.html">Descargar documentos PDF</a></li>
+   <li><a href="https://www.periodni.com/es/software.html">Descarga programas</a></li>
+   <li><a href="https://www.periodni.com/es/images.html">Descargar im&#225;genes</a></li>
+   </ul>
+</li>
+
+<li class="mobonly"><a href="#"><strong>&equiv;</strong>&nbsp;Men&#250;</a>
+	<ul>
+	<li><a href="https://www.periodni.com/es/index.html">Tabla peri&#243;dica</a></li>
+	<li><a href="https://www.periodni.com/es/calculadora_cientifica.html">JavaScript programas</a></li>
+	<li><a href="https://www.periodni.com/gallery/images.php">Galer&#237;a de im&#225;genes</a></li>
+	<li><a href="https://www.periodni.com/es/download.html">Descargas</a></li>
+	<li><a href="https://www.periodni.com/es/tablas_y_articulos-quimica.html">Tablas y art&#237;culos</a></li>
+	<li><a href="https://glossary.periodni.com/dictionary.php">Diccionario de qu&#237;mica (ingl&#233;s-croata)</a></li>
+	<li><a href="#gsearch">Buscar</a></li>
+	</ul>
+</li>
+</ul>
+
+	<!-- Mobi and Language menu -->
+<ul id="rightnav">
+<li id="edata"><a href="#"><strong>&nabla;</strong>&nbsp;Contenido</a>
+<ul>
+<li><a href="#double_arrow">Doble flecha</a></li>
+<li><a href="#fractions">Fracciones</a></li>
+<li><a href="#oxidation_numbers">N&#250;mero de oxidaci&#243;n</a></li>
+<li><a href="#vectors">Vectores</a></li>
+<li><a href="#limits_and_mass_number">L&#237;mites e n&#250;mero m&#225;sico</a></li>
+<li><a href="#sum_and_integrals">Suma e integrales</a></li>
+<li><a href="#radicals">Radicales</a></li>
+<li><a href="#bibliography">Bibliograf&#237;a</a></li>
+</ul>
+</li>
+
+<li id="lang"><a href="#"><img title="Espa&#241;ol" src="https://www.periodni.com/slike/s_es.jpg" width="20" height="10" alt="es">&nbsp;Espa&#241;ol</a>
+	<ul>
+	<li><a href="https://www.periodni.com/de/mathematische_und_chemische_formeln_auf_web.html">Deutsch</a></li>
+	<li><a href="https://www.periodni.com/mathematical_and_chemical_equations_on_web.html">English</a></li>
+	<li><a href="https://www.periodni.com/fr/equations_mathematiques_et_chimiques_sur_le_web.html">Fran&#231;ais</a></li>
+	<li><a href="https://www.periodni.com/hr/matematicke_i_kemijske_jednadzbe_na_webu.html">Hrvatski</a></li>
+	<li><a href="https://www.periodni.com/it/equazioni_matematiche_e_chimiche_sul_web.html">Italiano</a></li>
+	<li><a href="https://www.periodni.com/es/ecuaciones_matematicas_y_quimicas_en_la_web.html">Espa&#241;ol</a></li>
+	</ul>
+</li>
+</ul>
+</div>
+<!-- END PSE Menu -->
+
+</div> <!-- END menulayer -->
+ 
+<div id="gsearch">
+<div class="logosearch txt-r">
+<ul>
+<li><a href="https://www.periodni.com/enig/index.html">Contacto</a></li>
+<li><a href="https://www.periodni.com/es/buscar.html">Buscar en periodni.com</a></li>
+</ul>
+</div>
+</div> <!-- END gsearch -->
+
+<div class="xrow">
+<div class="copyme">Copyright &copy; 1998-2017 by Eni Generalic. Todos los derechos reservados. | <a href="https://www.periodni.com/es/bibliography.html">Bibliograf&#237;a</a> | <a href="https://www.periodni.com/disclaimer.html">Disclaimer</a></div>
+</div>
+<br class="clear" />
+</div> <!-- END headlayer -->
+
+<br class="clear" />
+
+<script type="text/javascript">
+<!--
+var m_abbr = new Array("Jan.", "Feb.", "Mar.", "Apr.", "May.", "June", "July", "Aug.", "Sep.", "Oct.", "Nov.", "Dec.");
+var d = new Date();
+var now_date = d.getDate() + " " + m_abbr[d.getMonth()] + " " + d.getFullYear();
+document.getElementById("nowdate").innerHTML = now_date;
+//https://www.periodni.com/css/eu_cookie_law.js
+var dropCookie=true;var cookieDuration=30;var cookieName='pseEUCookieLaw';var cookieValue='on';window.onload=function(){if(checkCookie(window.cookieName)!=window.cookieValue)createDiv();}
+function createDiv(){var bodytag=document.getElementsByTagName('body')[0];var div=document.createElement('div');div.setAttribute('id','cookie-law');div.innerHTML="<div class=\"tekst\">We use cookies to analyse our website traffic and to provide advertising which supports the website itself. You can read more about it <a href=\"https://www.periodni.com/privacy_policy.html\" target=\"_blank\">here<\/a>.<\/div><div class=\"botun\"><a class=\"close-cookie-banner\" href=\"javascript:void(0);\" onclick=\"removeMe();\">I&nbsp;understand<\/a><\/div>";bodytag.insertBefore(div,bodytag.firstChild);document.getElementsByTagName('body')[0].className+=' cookiebanner';createCookie(window.cookieName,window.cookieValue,window.cookieDuration);}function createCookie(name,value,days){if(days){var date=new Date();date.setTime(date.getTime()+(days*24*60*60*1000));var expires="; expires="+date.toGMTString();}else var expires="";if(window.dropCookie)document.cookie=name+"="+value+expires+"; path=/";}function checkCookie(name){var nameEQ=name+"=";var ca=document.cookie.split(';');for(var i=0;i<ca.length;i++){var c=ca[i];while(c.charAt(0)==' ')c=c.substring(1,c.length);if(c.indexOf(nameEQ)==0)return c.substring(nameEQ.length,c.length);}return null;}function removeMe(){var element=document.getElementById('cookie-law');element.parentNode.removeChild(element);}
+//-->
+</script>
+
+</body>
+</html>
