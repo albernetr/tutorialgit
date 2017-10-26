@@ -7,7 +7,7 @@
 
  Mayusculas: Indica que esta informacion es agregada por el usuario y puede ser utilizada en varios lugares, pueden ser datos como nombres de usuarios, rutas de archivos, etc.
 
-## Lista de Comandos
+## Lista de Comandos básicos
 
 * Ver la configuracion global de git.
 
@@ -69,9 +69,27 @@
 
     ` git help [<comando>]`
 
+## Ramas y fusiones
 
+* Ver las ramas del repositorio
 
+     `git branch`
 
+* Crear Ramas
+
+    `git branch <nombre_rama>`
+
+    Notas: La rama se crea a partir de la rama y el commit en el que nos encontremos
+
+* Pasar a una rama
+
+    `git checkout <nombre_rama>`
+
+* Fusionar una rama
+
+    a - Pararse en la rama que reibira los cambio ` git checkout <rama_que_recibe>`
+    
+    b - fusionar las ramas `git merge <rama_que_contiene_los_cambios>`
 
 
 
