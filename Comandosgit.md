@@ -3,7 +3,9 @@
 **Descripción:** Este archivo contiene los comando basicos para utilizar git.
 
 ## Convenciones:#
- <> : Significa que esta informacion debe ser agregada por el usuario, generalmente va acompañado por un texto en mayusculas que indca la información que debe ser agregada.
+ <> : Significa que esta informacion debe ser agregada por el usuario.
+
+ Mayusculas: Indica que esta informacion es agregada por el usuario y puede ser utilizada en varios lugares, pueden ser datos como nombres de usuarios, rutas de archivos, etc.
 
 ## Lista de Comandos
 
@@ -16,7 +18,7 @@
 
 * Cambiar la direccion de correo
 
-    ` git config --global user.mail "<MAIL_USUARIO>"`
+    ` git config --global user.email "<MAIL_USUARIO>"`
 
 * Iniciar el Repositorio git
 
@@ -25,5 +27,28 @@
 * Ver el estado del repositorio
 
     `git status`
+* Adicionar archivos al repositorio
+
+    ` git add <nobre_archivo>`
+
+* Adicionar todos los archivos y carpetas
+
+    ` git add -A ` ó ` git add .`
+
+* Guardar archivos en el repositorio
+
+    ` git commit -m " <mensaje_descriptivo_commit>"`
+
+    -m: indaca que se agregara un mensaje al commmit, todo commit debe tener un mensaje que describa de forma general los cambios realizados.
+* Vel el listado de commit realizados
+
+    ` git log`
+
+* Cambiar entre commit
+
+    ` git checkout <numero_comit>`
+
+
+
 
 
