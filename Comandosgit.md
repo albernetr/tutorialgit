@@ -81,17 +81,50 @@
 
     Notas: La rama se crea a partir de la rama y el commit en el que nos encontremos
 
+
 * Pasar a una rama
 
     `git checkout <nombre_rama>`
 
+* Crear una rama y moverse al mismo tiempo
+
+    ` git checkout -b <nombre_rama>`
+
 * Fusionar una rama
 
-    a - Pararse en la rama que reibira los cambio ` git checkout <rama_que_recibe>`
+    a - Ir a la rama que reibira los cambio ` git checkout <rama_que_recibe>`
     
     b - fusionar las ramas `git merge <rama_que_contiene_los_cambios>`
 
+* Eliminar una rama
+
+    `git branch -D <nombre_rama>`
 
 
+## Git y Github
+
+* Clonar un proyecto de github, hacer una copia de un repositorio de github pero sin afectar o contribuir en el proyecto.
+
+        a- copiar la url del proyecto en github
+
+        b- ubicarse en la carpeta donde se desea clonar el proyecto
+
+        c - ejecutar el comando ` git clone <url_proyecto>`
+* Pasar un repositorio local a github
+
+    a - crear un repositorio en github
+    b - copiar el link del repositorio
+    c - ejecutar el comando `git remote add origin <url_repositorio_github`
+    d - verificar la vinculacion de los repositorios `git remote -v `
+    
+* Desvincular un repositorio remoto 
+
+    Ubicarse en la carpeta y ejecutar el comando`git remote remove`
+
+* Actualizar de la computadora a github
+
+    `git push origin <nombre_rama>`
+
+    Nota: Se debe tener el usuario y el pwd de github a mano.
 
 
